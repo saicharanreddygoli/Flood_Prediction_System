@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Center | Flood Radar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate dark background */
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #1e293b !important;
+            border-bottom: 1px solid #475569;
+        }
+        .hero-section {
+            padding: 60px 0;
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 50%);
+        }
+        .metric-card {
+            background-color: #1e293b;
+            border: 2px solid #475569; /* Brighter, thicker borders */
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .metric-card:hover {
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+        }
+        .btn-launch {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            padding: 16px 40px;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+            transition: all 0.2s;
+        }
+        .btn-launch:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+        }
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #10b981;
+        }
+        /* CRITICAL CONTRAST OVERRIDES */
+        .force-white-text {
+            color: #ffffff !important;
+            opacity: 1 !important;
+        }
+        .force-bright-label {
+            color: #3b82f6 !important; /* Bright technical blue */
+            font-weight: 700 !important;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="/">
+                <span class="me-2">⚡</span> FLOOD RADAR CONTROL
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link text-white active fw-semibold" href="/">Home</a>
+                <a class="nav-link text-white" href="/prediction">Predict Engine</a>
+                <a class="nav-link text-white" href="/about">System Info</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container hero-section mt-4">
+        <div class="text-center mb-5">
+            <div class="d-inline-flex align-items-center bg-secondary bg-opacity-25 border border-secondary px-3 py-1 rounded-pill mb-3">
+                <span class="status-dot me-2"></span>
+                <small class="text-success fw-bold font-monospace" style="letter-spacing: 0.05em;">LIVE RADAR SERVER ACTIVE</small>
+            </div>
+            <h1 class="display-4 fw-bold text-white tracking-tight">AI-Powered Flood Forecasting</h1>
+            
+            <p class="lead force-white-text mx-auto mt-3 fs-5" style="max-width: 650px; line-height: 1.6;">
+                An early-warning predictive environment designed for high-precision regional threat calculation using machine learning pipelines.
+            </p>
+            
+            <div class="mt-4">
+                <a href="/prediction" class="btn btn-primary btn-lg btn-launch text-white text-uppercase tracking-wider">
+                    Enter Dashboard Control Panel
+                </a>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="metric-card">
+                    <div class="force-bright-label font-monospace small mb-2">ALGORITHM ENGINE</div>
+                    <h5 class="fw-bold text-white mb-2">XGBoost Architecture</h5>
+                    <p class="force-white-text small mb-0" style="opacity: 0.9; line-height: 1.5;">
+                        Ensemble decision tree framework optimized for gradient boosted verification parameters.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="metric-card">
+                    <div class="force-bright-label font-monospace small mb-2">SYSTEM ACCURACY</div>
+                    <h5 class="fw-bold text-white mb-2">96.55% Calibration</h5>
+                    <p class="force-white-text small mb-0" style="opacity: 0.9; line-height: 1.5;">
+                        Validated against historical meteorological records and severe monsoon profiles.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="metric-card">
+                    <div class="force-bright-label font-monospace small mb-2">RESPONSE TARGET</div>
+                    <h5 class="fw-bold text-white mb-2">Early Risk Mitigation</h5>
+                    <p class="force-white-text small mb-0" style="opacity: 0.9; line-height: 1.5;">
+                        Empowers emergency coordinators to deploy logistical assets ahead of flash flood events.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
